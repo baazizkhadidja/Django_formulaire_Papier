@@ -1,0 +1,34 @@
+
+<html>
+        <head>
+                <meta charset = 'utf-8'>
+                <title>demande</title>
+        </head>
+        <body>
+
+<table>
+<thead>
+                <tr>
+                        <td>Total</td>
+                        <td>Gloss_Qty</td>
+                </tr>
+</thead>
+<tbody>
+                {% for order in orders  %}
+                        <tr>
+                                <td>{{ order.total }} </td>
+                                <td>{{ order.gloss_qty}} </td>
+                        </tr>
+                {% endfor %}
+</tbody>
+</table>
+
+
+
+
+
+        </body>
+</html>
+
+
+

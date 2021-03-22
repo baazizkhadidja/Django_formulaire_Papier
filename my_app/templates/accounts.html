@@ -1,0 +1,41 @@
+<html>
+
+        <head>
+
+                <meta charset = utf-8/>
+                <title>la liste des comptes</title>
+        </head>
+<body>
+                <h4> les comptes</h4>      
+<table>
+<thead>
+                <tr>
+                        <td>nom</td>
+                        <td>site</td>
+                </tr>
+</thead>
+<tbody>
+                {% for account in accounts  %}
+	                <tr>
+        	                <td>{{ account.name }} </td>
+                	        <td>{{ account.website }} </td>	
+	                </tr>
+                {% endfor %}
+
+
+		{% if is_paginated %}
+	<div class = 'pagination'>
+			{% if page_obj.has_previous %}
+			<a href = ''>précédent</a>
+			{% endif %}
+			page{{page_obj.number}} sur {{page_obj.paginator.num_pages}}
+			{% if page_obj.has_next %}
+			<a href = ''>suivante</a>
+			{% endif %}
+		{% endif %}
+	</div>
+</tbody>
+</table>
+</body>
+
+</html>

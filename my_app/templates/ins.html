@@ -1,0 +1,15 @@
+<html>
+	<haed>
+		<meta charset = 'utf-8'/>
+		<title>les inscription</title>
+	</head>
+	<body>
+	<table>
+		<form action = {% url 'ins' %} method = 'POST'>
+			{% csrf_token %}
+			{{ forme }}
+			<input type = 'submit' value = 'inscrir' >
+		</form>
+	</table>
+	</body>
+</html>
